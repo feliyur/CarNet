@@ -19,8 +19,8 @@ def requestImage(query, PageNum):
         start='&start='+str(iter*10+1)
         r = http.request('GET', 
         'https://www.googleapis.com/customsearch/v1?' + 
-        'key=AIzaSyCMYsjrbPIzLmh35Ixnm0zLYjbcnAfRzHc' +
-        '&cx=014736663221694899975:4fetveencws' +'&q='+
+        'key=' +
+        '&cx=' +'&q='+
         query+start+'&num=10', headers={'User-Agent': 'Mozilla/5.0'}); 
         j = json.loads(r.data.decode('utf-8'))
         l=len(j['items'])
